@@ -87,6 +87,7 @@ class MeteorClient(EventEmitter):
                 self._login(self._login_data,
                             callback=reconnect_login_callback)
         else:
+            self.connected = True
             self._resubscribe()
 
     def _resubscribe(self):
